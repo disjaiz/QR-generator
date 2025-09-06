@@ -7,11 +7,11 @@
     <title>QR Generator</title>
 </head>
 
-<body class="py-6 w-screen font-verdana bg-gray-100">
+<body class="py-3 sm:py-6 font-verdana bg-gray-100 w-screen"> 
 
     <h1 class="text-gray-900 text-center text-4xl font-medium p-2 rounded mb-[30px] mt-[10px]">QR Code Generator</h1>
 
-    <div class="flex justify-center gap-10 w-[650px] h-[340px] my-0 mx-auto p-3">
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-0 sm:gap-10 sm:w-[650px] sm:h-[340px] h-auto my-0 mx-auto p-3">
 
         <div class="flex flex-col gap-2 pt-10">
             <p class="text-gray-700 font-bold text-[16px]">Enter URL</p>
@@ -21,9 +21,14 @@
                   placeholder="Enter URL" 
                   class="border border-gray-300 rounded px-2.5 py-1 text-black bg-white w-[300px] mb-2"
             />
-            <button id="generateBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-600 w-[300px]">
+            <button id="generateBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-600 w-[300px] cursor-pointer">
               Generate QR Code
             </button>
+
+
+            <button id="downloadBtn" class="px-4 py-2 text-black border rounded cursor-pointer  w-[300px]">Download</button>
+            <button id="shareBtn" class="px-4 py-2 text-black border rounded cursor-pointer  w-[300px]">Share</button>
+
         </div>
 
         <div class="mt-6" id="qrImageContainer">
@@ -31,6 +36,8 @@
         </div>
 
    </div>
+
+   
 
     <script src="index.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
